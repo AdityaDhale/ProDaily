@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    border-color: #232730;
+  }
+
+  body {
+    background-color: #0d0f12;
+    color: #ffffff;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    overflow-x: hidden;
+  }
+
+  /* Focus ring in Prodly lime */
+  :focus-visible {
+    outline: 2px solid #ccff00;
+    outline-offset: 2px;
+  }
+}
+
+@layer components {
+  /* Prodly Card */
+  .prodly-card {
+    background-color: #16181d;
+    border: 1px solid #232730;
+    border-radius: 16px;
+    transition: all 0.2s ease;
+  }
+
+  .prodly-card:hover {
+    border-color: #2d333f;
+  }
+
+  /* Custom input */
+  .prodly-input {
+    background-color: #16181d;
+    border: 1px solid #232730;
+    border-radius: 9999px;
+    padding: 0.5rem 1rem;
+    font-size: 0.75rem;
+    color: #ffffff;
+    transition: all 0.15s ease;
+  }
+
+  .prodly-input:focus {
+    outline: none;
+    border-color: #2d333f;
+  }
+
+  /* Buttons */
+  .btn-lime {
+    background-color: #ccff00;
+    color: #000000;
+    font-weight: 600;
+    font-size: 0.75rem;
+    padding: 0.5rem 1rem;
+    border-radius: 12px;
+    transition: all 0.15s ease;
+    box-shadow: 0 0 20px -3px rgba(204, 255, 0, 0.25);
+  }
+
+  .btn-lime:hover {
+    background-color: #b5f500;
+  }
+
+  .btn-lime:active {
+    transform: scale(0.96);
+  }
+
+  .btn-dark {
+    background-color: #1c2026;
+    color: #ffffff;
+    font-weight: 500;
+    font-size: 0.75rem;
+    padding: 0.5rem 1rem;
+    border-radius: 12px;
+    border: 1px solid #232730;
+    transition: all 0.15s ease;
+  }
+
+  .btn-dark:hover {
+    border-color: #2d333f;
+    background-color: #252b33;
+  }
+
+  .btn-dark:active {
+    transform: scale(0.96);
+  }
+}
+
+/* Custom scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #232730;
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #2d333f;
+}
